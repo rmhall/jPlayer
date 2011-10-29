@@ -27,15 +27,15 @@ package happyworm.jPlayer {
 	import flash.events.TimerEvent;
 
 	public class JplayerMp4 extends Sprite {
-		
+
 		public var myVideo:Video = new Video();
 		private var myConnection:NetConnection;
 		private var myStream:NetStream;
-		
+
 		private var myTransform:SoundTransform = new SoundTransform();
 
 		public var myStatus:JplayerStatus = new JplayerStatus();
-		
+
 		private var timeUpdateTimer:Timer = new Timer(250, 0); // Matched to HTML event freq
 		private var progressTimer:Timer = new Timer(250, 0); // Matched to HTML event freq
 		private var seekingTimer:Timer = new Timer(100, 0); // Internal: How often seeking is checked to see if it is over.
@@ -46,7 +46,7 @@ package happyworm.jPlayer {
 			myConnection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
 			myVideo.smoothing = true;
 			this.addChild(myVideo);
-			
+
 			timeUpdateTimer.addEventListener(TimerEvent.TIMER, timeUpdateHandler);
 			progressTimer.addEventListener(TimerEvent.TIMER, progressHandler);
 			seekingTimer.addEventListener(TimerEvent.TIMER, seekingHandler);
@@ -277,7 +277,7 @@ package happyworm.jPlayer {
 				myStatus.isPlaying = false;
 				myStatus.pausePosition = myStream.time * 1000;
 			}
-			
+
 			if(!isNaN(time) && myStatus.srcSet) {
 				myStatus.pausePosition = time;
 			}
