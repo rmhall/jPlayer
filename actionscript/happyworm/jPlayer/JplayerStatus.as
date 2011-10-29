@@ -40,7 +40,7 @@ package happyworm.jPlayer {
 		public var currentPercentRelative:Number;
 		public var currentPercentAbsolute:Number;
 		public var duration:Number;
-		
+
 		public var metaDataReady:Boolean;
 		public var metaData:Object;
 
@@ -69,7 +69,7 @@ package happyworm.jPlayer {
 			currentPercentRelative = 0;
 			currentPercentAbsolute = 0;
 			duration = 0;
-			
+
 			metaDataReady = false;
 			metaData = {};
 		}

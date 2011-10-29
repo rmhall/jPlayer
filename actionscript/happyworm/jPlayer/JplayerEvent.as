@@ -13,9 +13,9 @@
 
 package happyworm.jPlayer {
 	import flash.events.Event;
-	
+
 	public class JplayerEvent extends Event {
-		
+
 		// The event strings must match those in the JavaScript's $.jPlayer.event object
 
 		public static const JPLAYER_READY:String = "jPlayer_ready";

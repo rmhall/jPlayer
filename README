@@ -26,7 +26,7 @@ UPDATE: 10/21/2011
 
 UPDATE: 09/29/2011
 
-1. Additional fixes related to live streams having duration of 0 which was preventing some pause/play branching from executing. 
+1. Additional fixes related to live streams having duration of 0 which was preventing some pause/play branching from executing.
 2. Fix for pausing of live streams (they are closed now instead).
 3. Fixed an issue where a paused or closed stream is left pause/closed for 3600 seconds (1 hour) the default idle timeout for most FMS server, was generating an idle timeout event and a netconnection.close, which was causing the player to restart. Now short circuit that, and it properly closes netconnection, netstream, resets status and waits for a new play, or setMedia.
 

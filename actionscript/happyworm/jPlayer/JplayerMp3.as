@@ -33,7 +33,7 @@ package happyworm.jPlayer {
 		private var timeUpdateTimer:Timer = new Timer(250, 0); // Matched to HTML event freq
 		private var progressTimer:Timer = new Timer(250, 0); // Matched to HTML event freq
 		private var seekingTimer:Timer = new Timer(100, 0); // Internal: How often seeking is checked to see if it is over.
-		
+
 		public var myStatus:JplayerStatus = new JplayerStatus();
 
 		public function JplayerMp3(volume:Number) {
@@ -247,7 +247,7 @@ package happyworm.jPlayer {
 			if(wasPlaying) {
 				this.dispatchEvent(new JplayerEvent(JplayerEvent.JPLAYER_PAUSE, myStatus));
 			}
-			
+
 			if(myStatus.isStartingDownload) {
 				return true;
 			} else if(myStatus.loadRequired()) {
